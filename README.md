@@ -50,8 +50,13 @@ bash -c "$(curl –L https://raw.githubusercontent.com/oracle/oci-cli/master/scr
 ```
 使用 `oci -v`命令可以查看是否安装成功
 
+## 复制租户和用户的ocid
+1）甲骨文后台右上角>>用户设置>>分别点击用户和租户，在信息栏中有我们需要的ID，分别点击复制，可以保存在记事本备份好。具体看图：
+![image](https://user-images.githubusercontent.com/71005882/150918775-05aecf6a-7f0d-4472-af7a-ca468893e5ad.png)
+
+
 ## 配置oci
-2）输入如下代码开始配置，配置的路径默认在root目录。
+1）输入如下代码开始配置，配置的路径默认在root目录。
 ```shell
 oci setup config
 ```
