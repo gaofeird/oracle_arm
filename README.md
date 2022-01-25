@@ -36,9 +36,11 @@ bash -c "$(curl –L https://raw.githubusercontent.com/oracle/oci-cli/master/scr
 
 ## 配置oci
 2）输入如下代码开始配置，配置的路径默认在root目录。
+```shell
 oci setup config
+```
 2）具体配置看下面
-
+```shell
 Enter a location for your config [/root/.oci/config]: 
 Enter a user OCID: #输入你的用户ocid
 Enter a tenancy OCID: #输入你租户的用户id
@@ -64,9 +66,11 @@ Config written to /root/.oci/config
     'How to upload the public key':
  
    https://docs.cloud.oracle.com/Content/API/Concepts/apisigningkey.htm#How2
+```   
 3）复制生成的公钥，获取命令如下。
-
+```shell
 cat /root/.oci/oci_api_key_public.pem
+```
 4）把展示出来的内容复制下来。并且添加到，甲骨文后台=>用户设置>>资源>>API秘钥>>添加API秘钥，看图：![image](https://user-images.githubusercontent.com/71005882/150918104-3a59f224-91c9-475d-a8d4-a6a089ab87ff.png)
 
 
