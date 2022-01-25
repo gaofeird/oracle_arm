@@ -31,7 +31,23 @@ oci请求几乎无延迟(为了保险起见加了5s的间隔，会自动判断�
 bash -c "$(curl –L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 ```
 一路会车 然后 `exec -l $SHELL`重启shell 
-
+当出现“===> Modify profile to update your $PATH and enable shell/tab completion now? (Y/n):”这个时候，是在提示你输入y回车，会自动帮你添加环境变量。之后又是一路回车。出现如下提示表示安装成功。可以用：oci -v  来查询版本！！
+```shell
+===> Modify profile to update your $PATH and enable shell/tab completion now? (Y/n): y
+ 
+===> Enter a path to an rc file to update (file will be created if it does not exist) (leave blank to use '/root/.bashrc'): 
+-- Backed up '/root/.bashrc' to '/root/.bashrc.backup'
+-- Tab completion set up complete.
+-- If tab completion is not activated, verify that '/root/.bashrc' is sourced by your shell.
+-- 
+-- ** Run `exec -l $SHELL` to restart your shell. **
+-- 
+-- Installation successful.
+-- Run the CLI with /root/bin/oci --help
+[root@hostf68b156fb8 ~]# oci -v
+2.25.0
+[root@hostf68b156fb8 ~]# 
+```
 使用 `oci -v`命令可以查看是否安装成功
 
 ## 配置oci
